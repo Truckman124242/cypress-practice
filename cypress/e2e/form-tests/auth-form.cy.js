@@ -19,7 +19,7 @@ describe('Authorization tests', () => {
       cy.get('.flash.error').should('be.visible').and('contain', 'Your username is invalid!')
     })
 
-    it('Login validation error should appear', () => {
+    it('Validation error should appear in Log in modal', () => {
         cy.visit('https://qauto.forstudy.space', {
             auth: {
               username: 'guest',
