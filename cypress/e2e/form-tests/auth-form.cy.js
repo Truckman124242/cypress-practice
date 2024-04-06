@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 describe('Login test in herokuapp 1', () => {
-    it('Error message should appear for invalid password', () => {
+    it('Error message should appear when entering invalid password', () => {
       cy.visit('https://the-internet.herokuapp.com/login')
       cy.get('input#username').type('tomsmith')
       cy.get('input#password').type('incorrectpassword')
@@ -11,7 +11,7 @@ describe('Login test in herokuapp 1', () => {
   })
 
   describe('Login test in herokuapp 2', () => {
-    it('Error message should appear for invalid username and any password', () => {
+    it('Error message should appear when entering invalid username with any password', () => {
       cy.visit('https://the-internet.herokuapp.com/login')
 
       cy.get('input#username').type('Jake')
@@ -21,7 +21,7 @@ describe('Login test in herokuapp 1', () => {
     })
   })
 
-  describe('Login to qauto.forstudy.space', () => {
+  describe('Login test in qauto.forstudy.space', () => {
     it('Login validation error should appear', () => {
         cy.visit('https://qauto.forstudy.space', {
             auth: {
