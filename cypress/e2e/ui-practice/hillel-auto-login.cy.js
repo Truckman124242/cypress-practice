@@ -8,7 +8,7 @@ beforeEach(() => {
   });
 });
 
-describe("Sign in test", () => {
+describe("User account test", () => {
   it('User is being successfully signed in with "Garage" page opened', () => {
     cy.fixture("credentials.json").then((userData) => {
       cy.contains("Sign In").click();

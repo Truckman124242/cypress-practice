@@ -2,7 +2,7 @@ beforeEach(() => {
   cy.visit("https://the-internet.herokuapp.com/dropdown");
 });
 
-describe("Dropdown values test", () => {
+describe("Certain dropdown values are present", () => {
   it('Default "Please select an option" value is selected', () => {
     cy.get("select#dropdown option:selected").should(
       "have.text",
